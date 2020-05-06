@@ -12,7 +12,7 @@
   "dependencies": {
     "@fab/core": "^0.2.4"
   },
-    "publishConfig": {
-      "access": "public"
-    }
+  "publishConfig": {
+    "access": "public"
+  }
 }
