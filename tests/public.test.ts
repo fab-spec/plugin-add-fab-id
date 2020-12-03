@@ -9,7 +9,7 @@ describe('public installation', () => {
       $ npm init -y
       $ yarn add @fab/plugin-add-fab-id
       
-      $ npx fab init --empty
+      $ npx fab init --empty -y
       
       $ echo '${JSON.stringify({
         plugins: {
@@ -23,5 +23,5 @@ describe('public installation', () => {
       $ npx fab build
       stdout >> ${console.log}
     `
-  }, 500000)
+  }, 50000)
 })
