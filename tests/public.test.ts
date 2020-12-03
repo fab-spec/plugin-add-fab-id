@@ -7,9 +7,9 @@ describe('public installation', () => {
 
     await shellac.in(cwd)`
       $ npm init -y
-      $ yarn add @fab/plugin-add-fab-id
-      
       $ npx fab init --empty -y
+
+      $ yarn add @fab/plugin-add-fab-id
       
       $ echo '${JSON.stringify({
         plugins: {
@@ -17,11 +17,11 @@ describe('public installation', () => {
         }
       })}' > fab.config.json5
       
-      $ cat fab.config.json5
-      stdout >> ${console.log}
-      
       $ npx fab build
-      stdout >> ${console.log}
+      stdout >> ${build => expect(build).toMatch('Typecheck passed.')}
+      
+      $ ls -l
+      stdout >> ${files => expect(files).toMatch('fab.zip')}
     `
   }, 50000)
 })
