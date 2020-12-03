@@ -23,5 +23,5 @@ describe('public installation', () => {
       $ npx fab build
       stdout >> ${console.log}
     `
-  }, 50000)
+  }, 500000)
 })
