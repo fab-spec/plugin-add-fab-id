@@ -7,7 +7,7 @@ describe('public installation', () => {
 
     await shellac.in(cwd)`
       $ npm init -y
-      $ npx fab init --empty -y
+      $$ npx fab init --empty -y
 
       $ yarn add @fab/plugin-add-fab-id
       
@@ -17,7 +17,7 @@ describe('public installation', () => {
         }
       })}' > fab.config.json5
       
-      $ npx fab build
+      $$ npx fab build
       stdout >> ${build => expect(build).toMatch('Typecheck passed.')}
       
       $ ls -l
