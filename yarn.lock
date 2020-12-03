@@ -279,10 +279,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@fab/core@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@fab/core/-/core-0.2.4.tgz#92c158babee07841e8953c37ce95213e4d33e1b1"
-  integrity sha512-4FpxeGJ0XRtr0/WAx0XHNH2jtdQMqERhcGlVUvRx0nTUt939R8BlVesdTK1/pA9TT0KjKjd27HobfiEf6kokhg==
+"@fab/core@^1.0.0-rc.8":
+  version "1.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@fab/core/-/core-1.0.0-rc.8.tgz#2bd13b64e4840ba439f6dffe8deffcc37dc56466"
+  integrity sha512-IakJLIWVJ/vm2uFLIfDj3odoucx1+XGmIZUPDigvFHXSsXwKpJcrd2lVZ3eGfBelNbk3pEl44Jlgzs4Ple2G0A==
   dependencies:
     "@types/node" "^12.12.14"
     mime-types "^2.1.25"
