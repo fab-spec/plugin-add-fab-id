@@ -8,6 +8,9 @@ describe('public installation', () => {
     await shellac.in(cwd)`
       $ npm init -y
       $ yarn add @fab/plugin-add-fab-id
+      
+      $ npx fab init --empty
+      
       $ echo '${JSON.stringify({
         plugins: {
           '@fab/plugin-add-fab-id': {}
