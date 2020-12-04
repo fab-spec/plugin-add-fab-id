@@ -7,7 +7,7 @@ describe('@fab/plugin-add-fab-id', () => {
     const cwd = (await dir({ unsafeCleanup: true })).path
 
     await shellac.in(cwd)`
-      $ npm init -y
+      $ yarn init -y && yarn
       $$ npx fab init --empty -y
 
       $$ yarn add @fab/plugin-add-fab-id
@@ -26,11 +26,12 @@ describe('@fab/plugin-add-fab-id', () => {
     `
   }, 500000)
 
-  it('should be buildable locally', async () => {
-    const cwd = (await dir({ unsafeCleanup: true })).path
+  it.only('should be buildable locally', async () => {
+    const cwd = (await dir({ unsafeCleanup: false })).path
 
     await shellac.in(cwd)`
-      $ npm init -y
+      $$ pwd
+      $ yarn init -y && yarn
       $$ npx fab init --empty -y
 
       $ echo '${JSON.stringify({
