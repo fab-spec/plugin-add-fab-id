@@ -26,17 +26,18 @@ describe('@fab/plugin-add-fab-id', () => {
     `
   }, 500000)
 
-  it.only('should be buildable locally', async () => {
-    const cwd = (await dir({ unsafeCleanup: false })).path
+  it('should be buildable locally', async () => {
+    const cwd = (await dir({ unsafeCleanup: true })).path
 
     await shellac.in(cwd)`
       $$ pwd
       $ yarn init -y && yarn
       $$ npx fab init --empty -y
 
+      $ cp ${path.join(__dirname, 'index.ts')} plugin.ts
       $ echo '${JSON.stringify({
         plugins: {
-          [path.join(__dirname, 'index.ts')]: {}
+          './plugin.ts': {}
         }
       })}' > fab.config.json5
       
